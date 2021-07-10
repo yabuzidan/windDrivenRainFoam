@@ -1,0 +1,81 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.2                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      changeDictionaryDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+boundary
+{
+    inlet
+    {
+        type            mappedPatch;
+		sampleMode      nearestCell;
+		sampleRegion    region0;
+		samplePatch     none;
+		offsetMode      uniform;
+		offset          (1 0 0);
+    }
+    top
+    {
+        type            mappedPatch;
+		sampleMode      nearestCell;
+		sampleRegion    region0;
+		samplePatch     none;
+		offsetMode      uniform;
+		offset          (0 -1 0);	
+    }
+}
+
+
+U
+{
+    boundaryField
+    {
+        ".*"
+        {
+            type            zeroGradient;
+        }
+    }
+}
+k
+{
+    boundaryField
+    {
+        ".*"
+        {
+            type            zeroGradient;
+        }
+    }
+}
+epsilon
+{
+    boundaryField
+    {
+        ".*"
+        {
+            type            zeroGradient;
+        }
+    }
+}
+nut
+{
+    boundaryField
+    {
+        ".*"
+        {
+            type            zeroGradient;
+        }
+    }
+}
+
+// ************************************************************************* //

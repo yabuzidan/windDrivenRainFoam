@@ -1,0 +1,13 @@
+= windDrivenRainFoam_of8
+
+Fork of windDriveRainFoam
+(http://www.carmeliet.ethz.ch/research/downloads/winddrivenrainfoam.html) compatible with OpenFOAM v6,7,8
+
+== Compilation
+
+Run `wmake` in `windDrivenRainFoam_of8` folder.
+
+== Example case
+
+`cubicBuilding` case solved in two steps. `simpleFoam` case is run to solve wind phase followed by `windDrivenRainFoam` to solve rain phases.
+Use `Allrun` scripts to automate execution sequence.
