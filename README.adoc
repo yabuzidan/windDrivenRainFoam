@@ -1,7 +1,7 @@
 = windDrivenRainFoam_of8
 
 Fork of windDriveRainFoam
-(http://www.carmeliet.ethz.ch/research/downloads/winddrivenrainfoam.html) compatible with OpenFOAM v6,7,8
+(http://www.carmeliet.ethz.ch/research/downloads/winddrivenrainfoam.html) compatible with OpenFOAM v7,8
 
 == Compilation
 
