@@ -59,7 +59,7 @@ volScalarField gcr //initialize global catch ratio field
     
 );
 
-for (int phase_no = 1; phase_no < phases.size(); phase_no++)
+for (int phase_no = 0; phase_no < phases.size(); phase_no++)
 {
     gcr += scr[phase_no]*phases[phase_no][1];
 }
